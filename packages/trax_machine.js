@@ -33,9 +33,12 @@ if(!trax_DOM.containers.draggableWin) {
 if(trax_DOM.containers.trax) trax_DOM.containers.trax.remove();
 if(!trax_DOM.containers.trax){
 	// Criação da trax
-	trax_DOM.containers.trax = HUBBE.utils.createElement('div',{id:'trax_machine',
+	trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 		class:'position-absolute draggable-window',
-		style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;'
+		style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;',
+		elements:[
+			HUBBE.utils.createElement('div',{id:'trax_machine'})
+		]
 	});
 
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
