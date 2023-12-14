@@ -30,19 +30,26 @@ if(!trax_DOM.containers.draggableWin) {
 	document.body.appendChild(trax_DOM.containers.draggableWin);
 }
 
-if(trax_DOM.containers.trax) trax_DOM.containers.trax.remove();
-if(!trax_DOM.containers.trax){
-	// Criação da trax
-	trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
-		class:'position-absolute draggable-window',
-		style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;',
-		elements:[
-			HUBBE.utils.createElement('div',{id:'trax_machine'})
-		]
-	});
+trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
+	class:'position-absolute draggable-window',
+	style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;',
+	elements:[
+		HUBBE.utils.createElement('div',{id:'trax_machine',
+			class:'d-flex overflow-hidden position-relative flex-column shadow',elements:[
+				HUBBE.utils.createElement('div',{
+					class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header'
+				, elements:[
+					HUBBE.utils.createElement('div',{
+						class:'d-flex w-100 align-items-center justify-content-center',elements:[
+							HUBBE.utils.createElement('span',{class:'nitro-card-header-text', innerText:'Trax'})
+						]})
+				]})
+			]})
+	]
+});
 
-	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
-}
+if(trax_DOM.containers.trax) trax_DOM.containers.trax.remove();
+if(!trax_DOM.containers.trax)trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 
 
 // draggable-windows.js
