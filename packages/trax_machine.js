@@ -35,34 +35,28 @@ if(!trax_DOM.containers.trax){
 
 // draggable-windows.js
 
-function makeDraggable(selector) {
-    const elements = document.querySelectorAll(selector);
+function startDrag(evt) {
 
-    elements.forEach((element) => {
-        let isDragging = false;
-        let offset = { x: 0, y: 0 };
+    var diffX = evt.clientX - this.offsetLeft,
+        diffY = evt.clientY - this.offsetTop,
+        that = this;
 
-        element.addEventListener("mousedown", (event) => {
-            isDragging = true;
-            offset = {
-                x: event.clientX - element.getBoundingClientRect().left,
-                y: event.clientY - element.getBoundingClientRect().top,
-            };
-        });
+    function moveAlong(evt) {
+        that.style.left = (evt.clientX - diffX) + 'px';
+        that.style.top = (evt.clientY - diffY) + 'px';
+    }
 
-        document.addEventListener("mousemove", (event) => {
-            if (isDragging) {
-                element.style.left = event.clientX - offset.x + "px";
-                element.style.top = event.clientY - offset.y + "px";
-            }
-        });
+    function stopDrag() {
+        document.removeEventListener('mousemove', moveAlong);
+        document.removeEventListener('mouseup', stopDrag);
+    }
 
-        document.addEventListener("mouseup", () => {
-            isDragging = false;
-        });
-    });
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('mousemove', moveAlong);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    makeDraggable(".draggable-window");
-});
+function startDragIfDraggable(evt) {
+    if (evt.target.classList.contains('draggable-window')) startDrag.call(evt.target, evt);
+}
+
+document.body.addEventListener('mousedown', startDragIfDraggable);
