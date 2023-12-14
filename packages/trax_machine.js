@@ -3,7 +3,7 @@ let images = {
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
-	#trax_machine{width: 559px;height: 335px;padding: 31px 16px;background-image: url(${images.traxBg});margin: 0 auto;}
+	#trax_machine{width:559px;height:335px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: all;z-index:2023;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 	.position-absolute{position:absolute;}
 `;
