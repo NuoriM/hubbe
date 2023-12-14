@@ -3,7 +3,7 @@ let images = {
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
-	#trax_machine{width:559px;height:335px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: all;z-index:2023;}
+	#trax_machine{width:559px;height:335px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: all;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 	.position-absolute{position:absolute;}
 `;
@@ -34,7 +34,9 @@ if(trax_DOM.containers.trax) trax_DOM.containers.trax.remove();
 if(!trax_DOM.containers.trax){
 	// Criação da trax
 	trax_DOM.containers.trax = HUBBE.utils.createElement('div',{id:'trax_machine',
-		class:'position-absolute draggable-window'});
+		class:'position-absolute draggable-window',
+		style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;'
+	});
 
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 }
