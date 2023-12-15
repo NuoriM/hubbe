@@ -5,7 +5,6 @@ let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: all;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
-	.position-absolute{position:absolute;}
 `;
 const trax_DOM = {
 	style: null,
@@ -36,7 +35,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	elements:[
 		HUBBE.utils.createElement('div',{id:'trax_machine',
 			class:'d-flex overflow-hidden position-relative flex-column shadow',elements:[
-				HUBBE.utils.createElement('div',{class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header', elements:[
+				HUBBE.utils.createElement('div',{class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center container-fluid nitro-card-header', elements:[
 					HUBBE.utils.createElement('div',{
 						class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header', elements:[
 						HUBBE.utils.createElement('div',{
