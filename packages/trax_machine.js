@@ -16,7 +16,7 @@ const trax_DOM = {
 }
 
 // Validação estilo da trax
-if(trax_DOM.style) trax_DOM.style.remove();
+if(trax_DOM.style) document.querySelector('#trax_style').remove();
 trax_DOM.style = document.querySelector('#trax_style');
 if(!trax_DOM.style){
 	document.head.insertAdjacentHTML('beforeend',`<style id="trax_style">${style}</style>`);
