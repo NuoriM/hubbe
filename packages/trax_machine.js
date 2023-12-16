@@ -14,8 +14,6 @@ const trax_DOM = {
 	}
 }
 
-validarTrax();
-
 // Validação estilo da trax
 if(trax_DOM.style) trax_DOM.style.remove();
 trax_DOM.style = document.querySelector('#trax_style');
@@ -30,6 +28,8 @@ if(!trax_DOM.containers.draggableWin) {
 		{id:'draggable-windows-container'});
 	document.body.appendChild(trax_DOM.containers.draggableWin);
 }
+
+validarTrax();
 
 trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	class:'position-absolute draggable-window',
