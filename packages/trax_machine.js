@@ -4,6 +4,7 @@ let images = {
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
+	.palheta{width: 97px;height: 113px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
@@ -36,16 +37,18 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;',
 	elements:[
 		HUBBE.utils.createElement('div',{id:'trax_machine',
-			class:'d-flex overflow-hidden position-relative flex-column',elements:[
-				HUBBE.utils.createElement('div',{class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center container-fluid nitro-card-header', elements:[
-					HUBBE.utils.createElement('div',{
-						class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header', elements:[
-						HUBBE.utils.createElement('div',{
-							class:'d-flex w-100 align-items-center justify-content-center',elements:[
-								HUBBE.utils.createElement('span',{class:'nitro-card-header-text', innerText:'Trax'})
-							]})
+			class:'d-flex flex-column overflow-hidden position-relative flex-column',elements:[
+				HUBBE.utils.createElement('div',{class:'d-flex', elements:[
+					HUBBE.utils.createElement('div',{id:'cartuchos', elements:[
+
+					]}),
+					HUBBE.utils.createElement('div',{id:'palhetas', elements:[
+						HUBBE.utils.createElement('div',{class:'palheta'}),
+						HUBBE.utils.createElement('div',{class:'palheta'}),
+						HUBBE.utils.createElement('div',{class:'palheta'}),
+						HUBBE.utils.createElement('div',{class:'palheta'}),
 					]})
-				]}),
+				]})
 			]})
 	]
 });
