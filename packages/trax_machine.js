@@ -29,7 +29,7 @@ if(!trax_DOM.containers.draggableWin) {
 	document.body.appendChild(trax_DOM.containers.draggableWin);
 }
 
-validarTrax();
+
 
 trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	class:'position-absolute draggable-window',
@@ -50,13 +50,12 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	]
 });
 
+validarTrax();
 function validarTrax(){
-	if(!trax_DOM.containers.trax) {
-		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax)
-	}else{
+	if(trax_DOM.containers.trax){
 		trax_DOM.containers.trax.remove();
-		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
-	};
+	}
+	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 }
 // if(trax_DOM.containers.trax){
 // 	trax_DOM.containers.trax.remove();
