@@ -75,28 +75,28 @@ function validarTrax(){
 
 // draggable-windows.js
 
-// function startDrag(evt) {
+function startDrag(evt) {
 
-//     var diffX = evt.clientX - this.offsetLeft,
-//         diffY = evt.clientY - this.offsetTop,
-//         that = this;
+    var diffX = evt.clientX - this.offsetLeft,
+        diffY = evt.clientY - this.offsetTop,
+        that = this;
 
-//     function moveAlong(evt) {
-//         that.style.left = (evt.clientX - diffX) + 'px';
-//         that.style.top = (evt.clientY - diffY) + 'px';
-//     }
+    function moveAlong(evt) {
+        that.style.left = (evt.clientX - diffX) + 'px';
+        that.style.top = (evt.clientY - diffY) + 'px';
+    }
 
-//     function stopDrag() {
-//         document.removeEventListener('mousemove', moveAlong);
-//         document.removeEventListener('mouseup', stopDrag);
-//     }
+    function stopDrag() {
+        document.removeEventListener('mousemove', moveAlong);
+        document.removeEventListener('mouseup', stopDrag);
+    }
 
-//     document.addEventListener('mouseup', stopDrag);
-//     document.addEventListener('mousemove', moveAlong);
-// }
+    document.addEventListener('mouseup', stopDrag);
+    document.addEventListener('mousemove', moveAlong);
+}
 
-// function startDragIfDraggable(evt) {
-//     if (evt.target.classList.contains('draggable-window')) startDrag.call(evt.target, evt);
-// }
+function startDragIfDraggable(evt) {
+    if (evt.target.classList.contains('draggable-window')) startDrag.call(evt.target, evt);
+}
 
-// document.body.addEventListener('mousedown', startDragIfDraggable);
+document.body.addEventListener('mousedown', startDragIfDraggable);
