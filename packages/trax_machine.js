@@ -16,10 +16,11 @@ const trax_DOM = {
 }
 
 // Validação estilo da trax
-if(trax_DOM.style) document.querySelector('#trax_style').remove();
 trax_DOM.style = document.querySelector('#trax_style');
 if(!trax_DOM.style){
 	document.head.insertAdjacentHTML('beforeend',`<style id="trax_style">${style}</style>`);
+}else{
+	document.querySelector('#trax_style').remove();
 }
 
 // Validação da janela onde os elementos podem ser arrastados
