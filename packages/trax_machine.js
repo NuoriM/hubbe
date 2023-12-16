@@ -53,7 +53,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 validarTrax();
 function validarTrax(){
 	if(trax_DOM.containers.trax){
-		console.log("Encontrado, removendo...");
+		console.log("Encontrado, removendo...", trax_DOM.containers.trax);
 		trax_DOM.containers.trax.remove();
 	}
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
