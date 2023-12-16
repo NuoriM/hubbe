@@ -14,6 +14,8 @@ const trax_DOM = {
 	}
 }
 
+validarTrax();
+
 // Validação estilo da trax
 if(trax_DOM.style) trax_DOM.style.remove();
 trax_DOM.style = document.querySelector('#trax_style');
@@ -48,12 +50,14 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	]
 });
 
-if(!trax_DOM.containers.trax) {
-	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax)
-}else{
-	trax_DOM.containers.trax.remove();
-	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
-};
+function validarTrax(){
+	if(!trax_DOM.containers.trax) {
+		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax)
+	}else{
+		trax_DOM.containers.trax.remove();
+		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
+	};
+}
 // if(trax_DOM.containers.trax){
 // 	trax_DOM.containers.trax.remove();
 // }
