@@ -34,7 +34,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	style:'z-index: 401; top: calc(50vh - 160px); left: calc(50vw - 264px); transform: translate(-169px, 13px); visibility: visible;',
 	elements:[
 		HUBBE.utils.createElement('div',{id:'trax_machine',
-			class:'d-flex overflow-hidden position-relative flex-column shadow',elements:[
+			class:'d-flex overflow-hidden position-relative flex-column',elements:[
 				HUBBE.utils.createElement('div',{class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center container-fluid nitro-card-header', elements:[
 					HUBBE.utils.createElement('div',{
 						class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header', elements:[
