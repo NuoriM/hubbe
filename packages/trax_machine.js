@@ -21,6 +21,7 @@ if(!trax_DOM.style){
 	document.head.insertAdjacentHTML('beforeend',`<style id="trax_style">${style}</style>`);
 }else{
 	document.querySelector('#trax_style').remove();
+	document.head.insertAdjacentHTML('beforeend',`<style id="trax_style">${style}</style>`);
 }
 
 // Validação da janela onde os elementos podem ser arrastados
@@ -30,8 +31,6 @@ if(!trax_DOM.containers.draggableWin) {
 		{id:'draggable-windows-container'});
 	document.body.appendChild(trax_DOM.containers.draggableWin);
 }
-
-
 
 trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 	class:'position-absolute draggable-window',
