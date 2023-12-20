@@ -3,6 +3,7 @@ let images = {
 	caixaPalheta: 'https://i.imgur.com/g48Ik5D.png',
 	listraPalhetas: 'https://i.imgur.com/yJe8Hor.png',
 	listaCartuchos: 'https://i.imgur.com/BG0WUBL.png',
+	moduleColorImage: 'https://i.imgur.com/FE6AmXZ.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
@@ -11,6 +12,7 @@ let style = `
 	#pager{align-self: center;padding: 2px 8px 6px 8px;}
 	#palhetas{flex: 1 0 auto;align-self: center;gap:6px;justify-content: end;background-image: url(${images.listraPalhetas});}
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
+	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -52,19 +54,19 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 					]}),
 					HUBBE.utils.createElement('div',{id:'palhetas', class:'d-flex', elements:[
 						HUBBE.utils.createElement('div',{class:'palheta',elements:[
-							HUBBE.utils.createElement('div',{"traxModuleColor":"1"}),
+							HUBBE.utils.createElement('div',{"traxModuleColor":"1", class:'moduleC'}),
 							HUBBE.utils.createElement("div",{class:'picker'}),
 						]}),
 						HUBBE.utils.createElement('div',{class:'palheta',elements:[
-							HUBBE.utils.createElement('div',{"traxModuleColor":"2"}),
+							HUBBE.utils.createElement('div',{"traxModuleColor":"2", class:'moduleC'}),
 							HUBBE.utils.createElement("div",{class:'picker'}),
 						]}),
 						HUBBE.utils.createElement('div',{class:'palheta',elements:[
-							HUBBE.utils.createElement('div',{"traxModuleColor":"3"}),
+							HUBBE.utils.createElement('div',{"traxModuleColor":"3", class:'moduleC'}),
 							HUBBE.utils.createElement("div",{class:'picker'}),
 						]}),
 						HUBBE.utils.createElement('div',{class:'palheta',elements:[
-							HUBBE.utils.createElement('div',{"traxModuleColor":"4"}),
+							HUBBE.utils.createElement('div',{"traxModuleColor":"4", class:'moduleC'}),
 							HUBBE.utils.createElement("div",{class:'picker'}),
 						]}),
 					]})
