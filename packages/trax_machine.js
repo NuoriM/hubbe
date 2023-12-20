@@ -51,6 +51,10 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 						HUBBE.utils.createElement('div',{class:'palheta'}),
 						HUBBE.utils.createElement('div',{class:'palheta'}),
 					]})
+				]}),
+				HUBBE.utils.createElement('div',{class:'d-flex flex-column flex-fill', elements:[
+					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-fill'}),
+					HUBBE.utils.createElement('div',{id:'export-music'}),
 				]})
 			]})
 	]
