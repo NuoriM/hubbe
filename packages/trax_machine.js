@@ -57,7 +57,8 @@ validarTrax();
 function validarTrax(){
 	if(trax_DOM.containers.trax){
 		console.log("Encontrado, removendo...", trax_DOM.containers.trax);
-		document.querySelector('#trax_machine').remove();
+		trax_DOM.containers.trax.remove();
+		// document.querySelector('#trax_machine').remove();
 		//trax_DOM.containers.trax.remove();
 	}
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
