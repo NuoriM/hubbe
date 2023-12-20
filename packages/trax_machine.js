@@ -2,13 +2,14 @@ let images = {
 	traxBg: 'https://i.imgur.com/V6BRfe8.png',
 	caixaPalheta: 'https://i.imgur.com/g48Ik5D.png',
 	listraPalhetas: 'https://i.imgur.com/yJe8Hor.png',
+	listaCartuchos: 'https://i.imgur.com/BG0WUBL.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
-	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
-	#cartuchos_list{width:139px;height:125px;}
+	#trax_machine{width: 591px;height: 397px;padding: 31px 20px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
+	#cartuchos_list{width:139px;height:125px;background-image:url(${images.listaCartuchos});}
 	#pager{align-self: center;padding: 2px 8px 6px 8px;}
-	#palhetas{flex: 1 0 auto;align-self: center;justify-content: center;background-image: url(${images.listraPalhetas});}
+	#palhetas{flex: 1 0 auto;align-self: center;gap:6px;justify-content: end;background-image: url(${images.listraPalhetas});}
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.picker{margin: 7px auto;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
