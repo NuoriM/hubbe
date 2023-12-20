@@ -15,7 +15,7 @@ let style = `
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
-	#timelines{background-image:url(${images.timeline});}
+	#timeline{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
