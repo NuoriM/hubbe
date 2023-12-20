@@ -5,7 +5,7 @@ let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
 	#cartuchos_list{width:139px;height:125px;}
-	#pager{width: 58px;height: 16px;padding: 2px 8px 6px 8px;}
+	#pager{align-self: center;padding: 2px 8px 6px 8px;}
 	.palheta{width: 97px;height: 113px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -41,7 +41,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 		HUBBE.utils.createElement('div',{id:'trax_machine',
 			class:'d-flex flex-column overflow-hidden position-relative flex-column',elements:[
 				HUBBE.utils.createElement('div',{class:'d-flex', elements:[
-					HUBBE.utils.createElement('div',{id:'cartuchos', elements:[
+					HUBBE.utils.createElement('div',{id:'cartuchos', class:'d-flex flex-column', elements:[
 						HUBBE.utils.createElement('div',{id:'cartuchos_list'}),
 						HUBBE.utils.createElement('div',{id:'pager'}),
 					]}),
@@ -58,13 +58,15 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 
 validarTrax();
 function validarTrax(){
-	if(trax_DOM.containers.trax){
+	let traxWindow = document.querySelector('#trax_machine');
+	if(traxWindow){
 		console.log("Encontrado, removendo...", trax_DOM.containers.trax);
-		trax_DOM.containers.trax.remove();
-		// document.querySelector('#trax_machine').remove();
 		//trax_DOM.containers.trax.remove();
+		traxWindow.remove();
+		//trax_DOM.containers.trax.remove();
+	}else {
+		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 	}
-	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 }
 // if(trax_DOM.containers.trax){
 // 	trax_DOM.containers.trax.remove();
