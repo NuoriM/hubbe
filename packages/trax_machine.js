@@ -17,7 +17,7 @@ let style = `
 	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
 	#controls{gap: 5px;}
-	#play{background-image: url(${images.playBtn});}
+	#playPause{background-image: url(${images.playBtn});}
 	.bigBtn{width: 56px;height: 23px;}
 	.smallBtn{width: 36px;height: 23px;}
 	.tinyBtn{width: 19px;height: 23px;}
