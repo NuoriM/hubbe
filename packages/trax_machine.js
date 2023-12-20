@@ -1,12 +1,14 @@
 let images = {
 	traxBg: 'https://i.imgur.com/V6BRfe8.png',
+	traxCaixaPalheta: 'https://i.imgur.com/g48Ik5D.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
 	#cartuchos_list{width:139px;height:125px;}
 	#pager{align-self: center;padding: 2px 8px 6px 8px;}
-	.palheta{width: 97px;height: 113px;}
+	.palheta{width: 97px;height: 113px;background-image:url(${images.traxCaixaPalheta});}
+	.picker{margin: 7px auto;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
@@ -46,10 +48,22 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 						HUBBE.utils.createElement('div',{id:'pager'}),
 					]}),
 					HUBBE.utils.createElement('div',{id:'palhetas', class:'d-flex', elements:[
-						HUBBE.utils.createElement('div',{class:'palheta'}),
-						HUBBE.utils.createElement('div',{class:'palheta'}),
-						HUBBE.utils.createElement('div',{class:'palheta'}),
-						HUBBE.utils.createElement('div',{class:'palheta'}),
+						HUBBE.utils.createElement('div',{class:'palheta',elements:[
+							HUBBE.utils.createElement('div',{"traxModuleColor":"1"}),
+							HUBBE.utils.createElement("div",{class:'picker'}),
+						]}),
+						HUBBE.utils.createElement('div',{class:'palheta',elements:[
+							HUBBE.utils.createElement('div',{"traxModuleColor":"2"}),
+							HUBBE.utils.createElement("div",{class:'picker'}),
+						]}),
+						HUBBE.utils.createElement('div',{class:'palheta',elements:[
+							HUBBE.utils.createElement('div',{"traxModuleColor":"3"}),
+							HUBBE.utils.createElement("div",{class:'picker'}),
+						]}),
+						HUBBE.utils.createElement('div',{class:'palheta',elements:[
+							HUBBE.utils.createElement('div',{"traxModuleColor":"4"}),
+							HUBBE.utils.createElement("div",{class:'picker'}),
+						]}),
 					]})
 				]}),
 				HUBBE.utils.createElement('div',{class:'d-flex flex-column flex-fill', elements:[
@@ -64,29 +78,10 @@ validarTrax();
 function validarTrax(){
 	let traxWindow = document.querySelector('#trax_machine');
 	if(traxWindow){
-		console.log("Encontrado, removendo...", trax_DOM.containers.trax);
-		//trax_DOM.containers.trax.remove();
 		traxWindow.parentElement.remove();
-		//trax_DOM.containers.trax.remove();
 	}
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 }
-// if(trax_DOM.containers.trax){
-// 	trax_DOM.containers.trax.remove();
-// }
-// if(!trax_DOM.containers.trax) trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
-
-/*HUBBE.utils.createElement('div',{class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header'}),
-				HUBBE.utils.createElement('div',{
-					class:'d-flex position-relative flex-column gap-2 align-items-center justify-content-center drag-handler container-fluid nitro-card-header', elements:[
-					HUBBE.utils.createElement('div',{
-						class:'d-flex w-100 align-items-center justify-content-center',elements:[
-							HUBBE.utils.createElement('span',{class:'nitro-card-header-text', innerText:'Trax'})
-						]})
-				]})*/
-
-
-// draggable-windows.js
 
 function startDrag(evt) {
 
