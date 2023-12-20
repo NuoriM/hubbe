@@ -4,6 +4,7 @@ let images = {
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
+	#cartuchos_list{width:139px;height:125px;}
 	.palheta{width: 97px;height: 113px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -40,9 +41,9 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 			class:'d-flex flex-column overflow-hidden position-relative flex-column',elements:[
 				HUBBE.utils.createElement('div',{class:'d-flex', elements:[
 					HUBBE.utils.createElement('div',{id:'cartuchos', elements:[
-
+						HUBBE.utils.createElement('div',{id:'cartuchos_list'}),
 					]}),
-					HUBBE.utils.createElement('div',{id:'palhetas', elements:[
+					HUBBE.utils.createElement('div',{id:'palhetas', class:'d-flex', elements:[
 						HUBBE.utils.createElement('div',{class:'palheta'}),
 						HUBBE.utils.createElement('div',{class:'palheta'}),
 						HUBBE.utils.createElement('div',{class:'palheta'}),
