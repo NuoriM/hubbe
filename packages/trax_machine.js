@@ -66,7 +66,7 @@ function validarTrax(){
 	if(traxWindow){
 		console.log("Encontrado, removendo...", trax_DOM.containers.trax);
 		//trax_DOM.containers.trax.remove();
-		traxWindow.remove();
+		traxWindow.parentElement.remove();
 		//trax_DOM.containers.trax.remove();
 	}
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
