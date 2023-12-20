@@ -64,9 +64,8 @@ function validarTrax(){
 		//trax_DOM.containers.trax.remove();
 		traxWindow.remove();
 		//trax_DOM.containers.trax.remove();
-	}else {
-		trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 	}
+	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
 }
 // if(trax_DOM.containers.trax){
 // 	trax_DOM.containers.trax.remove();
