@@ -10,7 +10,7 @@ let style = `
 	#trax_machine{width: 591px;height: 397px;padding: 31px 20px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
 	#cartuchos_list{width:139px;height:125px;background-image:url(${images.listaCartuchos});}
 	#pager{align-self: center;padding: 2px 8px 6px 8px;}
-	#palhetas{flex: 1 0 auto;align-self: center;gap:6px;justify-content: end;background-image: url(${images.listraPalhetas});}
+	#palhetas{flex: 1 0 auto;gap:6px;justify-content: end;background-image: url(${images.listraPalhetas});}
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
