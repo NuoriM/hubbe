@@ -8,7 +8,7 @@ let style = `
 	#trax_machine{width: 591px;height: 397px;padding: 31px 16px;background-image:url(${images.traxBg});margin: 0 auto;pointer-events: none;}
 	#cartuchos_list{width:139px;height:125px;}
 	#pager{align-self: center;padding: 2px 8px 6px 8px;}
-	.palhetas{flex: 1 0 auto;align-self: center;justify-content: center;background-image: url(${images.listraPalhetas});}
+	#palhetas{flex: 1 0 auto;align-self: center;justify-content: center;background-image: url(${images.listraPalhetas});}
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.picker{margin: 7px auto;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
