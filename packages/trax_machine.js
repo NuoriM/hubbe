@@ -18,9 +18,9 @@ let style = `
 	.picker{margin: 7px auto;}
 	#controls{gap: 5px;}
 	#play{background-image: url(${images.playBtn});}
-	#bigBtn{width: 56px;height: 23px;}
-	#smallBtn{width: 36px;height: 23px;}
-	#tinyBtn{width: 19px;height: 23px;}
+	.bigBtn{width: 56px;height: 23px;}
+	.smallBtn{width: 36px;height: 23px;}
+	.tinyBtn{width: 19px;height: 23px;}
 	#timeline{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
