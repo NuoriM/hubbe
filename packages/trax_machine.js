@@ -72,8 +72,26 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 					]})
 				]}),
 				HUBBE.utils.createElement('div',{class:'d-flex flex-column flex-fill', elements:[
-					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-fill'}),
-					HUBBE.utils.createElement('div',{id:'export-music'}),
+					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-fill',elements:[
+						HUBBE.utils.createElement('div',{id:'controls',elements:[
+							HUBBE.utils.createElement('input',{id:'playPause',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'stop',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'save',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'open',type:'button'}),
+							HUBBE.utils.createElement('input',{id:'clear',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'moveLeft',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'moveRight',type:'button',isDisabled:true}),
+						]}),
+						HUBBE.utils.createElement('div',{id:'timeline',elements:[
+							//TODO: Loop
+						]})
+					]}),
+					HUBBE.utils.createElement('div',{id:'export-music',elements:[
+						HUBBE.utils.createElement('h2',{innerText:'Música no formato do Hubbe'}),
+						HUBBE.utils.createElement('div',{"dataCopied":"Copiado!",elements:[
+							HUBBE.utils.createElement('span',{}),
+						]})
+					]}),
 				]})
 			]})
 	]
