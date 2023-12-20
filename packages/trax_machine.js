@@ -4,6 +4,7 @@ let images = {
 	listraPalhetas: 'https://i.imgur.com/yJe8Hor.png',
 	listaCartuchos: 'https://i.imgur.com/BG0WUBL.png',
 	moduleColorImage: 'https://i.imgur.com/FE6AmXZ.png',
+	timeline: 'https://i.imgur.com/5BmnJmF.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
@@ -14,6 +15,7 @@ let style = `
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
+	#timelines{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
@@ -72,8 +74,8 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 					]})
 				]}),
 				HUBBE.utils.createElement('div',{class:'d-flex flex-column flex-fill', elements:[
-					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-fill',elements:[
-						HUBBE.utils.createElement('div',{id:'controls',elements:[
+					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-column flex-fill',elements:[
+						HUBBE.utils.createElement('div',{id:'controls', class:'d-flex justify-content-end',elements:[
 							HUBBE.utils.createElement('input',{id:'playPause',type:'button',isDisabled:true}),
 							HUBBE.utils.createElement('input',{id:'stop',type:'button',isDisabled:true}),
 							HUBBE.utils.createElement('input',{id:'save',type:'button',isDisabled:true}),
