@@ -5,6 +5,7 @@ let images = {
 	listaCartuchos: 'https://i.imgur.com/BG0WUBL.png',
 	moduleColorImage: 'https://i.imgur.com/FE6AmXZ.png',
 	timeline: 'https://i.imgur.com/5BmnJmF.png',
+	playBtn: 'https://i.imgur.com/PXXuHyW.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
@@ -15,6 +16,11 @@ let style = `
 	.palheta{width: 97px;height: 113px;background-image:url(${images.caixaPalheta});}
 	.moduleC{background-image: url(${images.moduleColorImage});height:24px;}
 	.picker{margin: 7px auto;}
+	#controls{gap: 5px;}
+	#play{background-image: url(${images.playBtn});}
+	#bigBtn{width: 56px;height: 23px;}
+	#smallBtn{width: 36px;height: 23px;}
+	#tinyBtn{width: 19px;height: 23px;}
 	#timeline{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -76,13 +82,13 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 				HUBBE.utils.createElement('div',{class:'d-flex flex-column flex-fill', elements:[
 					HUBBE.utils.createElement('div',{id:'player', class:'d-flex flex-column flex-fill',elements:[
 						HUBBE.utils.createElement('div',{id:'controls', class:'d-flex justify-content-end',elements:[
-							HUBBE.utils.createElement('input',{id:'playPause',type:'button',isDisabled:true}),
-							HUBBE.utils.createElement('input',{id:'stop',type:'button',isDisabled:true}),
-							HUBBE.utils.createElement('input',{id:'save',type:'button',isDisabled:true}),
-							HUBBE.utils.createElement('input',{id:'open',type:'button'}),
-							HUBBE.utils.createElement('input',{id:'clear',type:'button',isDisabled:true}),
-							HUBBE.utils.createElement('input',{id:'moveLeft',type:'button',isDisabled:true}),
-							HUBBE.utils.createElement('input',{id:'moveRight',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'playPause',class:'bigBtn',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'stop',class:'bigBtn',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'save',class:'bigBtn',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'open',class:'bigBtn',type:'button'}),
+							HUBBE.utils.createElement('input',{id:'clear',class:'smallBtn',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'moveLeft',class:'tinyBtn',type:'button',isDisabled:true}),
+							HUBBE.utils.createElement('input',{id:'moveRight',class:'tinyBtn',type:'button',isDisabled:true}),
 						]}),
 						HUBBE.utils.createElement('div',{id:'timeline',elements:[
 							//TODO: Loop
