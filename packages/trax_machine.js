@@ -6,6 +6,12 @@ let images = {
 	moduleColorImage: 'https://i.imgur.com/FE6AmXZ.png',
 	timeline: 'https://i.imgur.com/5BmnJmF.png',
 	playBtn: 'https://i.imgur.com/PXXuHyW.png',
+	stopBtn: 'https://i.imgur.com/xFNr9Fb.png',
+	saveBtn: 'https://i.imgur.com/z8P2gOy.png',
+	openBtn: 'https://i.imgur.com/MJaqv3P.png',
+	clearBtn: 'https://i.imgur.com/lpnEPuH.png',
+	moveLeftBtn: 'https://i.imgur.com/CMyoW7L.png',
+	moveRightBtn: 'https://i.imgur.com/gTbRG74.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
@@ -18,6 +24,12 @@ let style = `
 	.picker{margin: 7px auto;}
 	#controls{gap: 5px;}
 	#playPause{background-image: url(${images.playBtn});}
+	#stop{background-image: url(${images.stopBtn});}
+	#save{background-image: url(${images.saveBtn});}
+	#open{background-image: url(${images.openBtn});}
+	#clear{background-image: url(${images.clearBtn});}
+	#moveLeft{background-image: url(${images.moveLeftBtn});}
+	#moveRight{background-image: url(${images.moveRightBtn});}
 	.bigBtn{width: 56px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.smallBtn{width: 36px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
