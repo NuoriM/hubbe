@@ -35,7 +35,7 @@ let style = `
 	.smallBtn{width: 36px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.smallBtn:disabled{background-position: 36px 0px;}
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
-	.smallBtn:disabled{background-position: 19px 0px;}
+	.tinyBtn:disabled{background-position: 19px 0px;}
 	#timeline{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
