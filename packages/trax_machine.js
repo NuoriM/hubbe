@@ -31,8 +31,11 @@ let style = `
 	#moveLeft{background-image: url(${images.moveLeftBtn});}
 	#moveRight{background-image: url(${images.moveRightBtn});}
 	.bigBtn{width: 56px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
+	.bigBtn:disabled{background-position: 56px 0px;}
 	.smallBtn{width: 36px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
+	.smallBtn:disabled{background-position: 36px 0px;}
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
+	.smallBtn:disabled{background-position: 19px 0px;}
 	#timeline{background-image:url(${images.timeline});}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -107,7 +110,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 						]})
 					]}),
 					HUBBE.utils.createElement('div',{id:'export-music',elements:[
-						HUBBE.utils.createElement('h2',{innerText:'Música no formato do Hubbe'}),
+						// HUBBE.utils.createElement('h2',{innerText:'Música no formato do Hubbe'}),
 						HUBBE.utils.createElement('div',{"dataCopied":"Copiado!",elements:[
 							HUBBE.utils.createElement('span',{}),
 						]})
