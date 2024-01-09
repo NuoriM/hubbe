@@ -154,7 +154,7 @@ function criarTimeline(){
 					layerContent = HUBBE.utils.createElement('div',{})
 				]})
 			]});
-			trax_DOM.containers.timeline.appendChild(layer);
+			timeline.appendChild(layer);
 
 			//Criação dos espaços
 			for(let s=0;s<trax_config.totalTimeLineSpaces;s++){

@@ -4,7 +4,7 @@
 		"file_name": "trax_machine",
 		"file_url": "/trax_machine.js",
 		"author": "NuoriM",
-		"version": "1.5.3",
+		"version": "1.5.4",
 		"dependencies": ["advancedLogger"]
 	},
 	{
