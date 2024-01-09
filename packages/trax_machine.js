@@ -12,6 +12,7 @@ let images = {
 	clearBtn: 'https://i.imgur.com/lpnEPuH.png',
 	moveLeftBtn: 'https://i.imgur.com/CMyoW7L.png',
 	moveRightBtn: 'https://i.imgur.com/gTbRG74.png',
+	timelineLine: 'https://i.imgur.com/nDlkwZe.png',
 }
 let style = `
 	#draggable-windows-container {position: absolute;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;overflow: hidden;}
@@ -37,6 +38,8 @@ let style = `
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.tinyBtn:disabled{background-position: 19px 0px;}
 	#timeline{background-image:url(${images.timeline});}
+	div#timeline div.layer {background-image:url(${images.timelineLine})}
+	.space{width: 21px;height: 21px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
@@ -44,7 +47,13 @@ const trax_DOM = {
 	containers: {
 		draggableWin: null,
 		trax: null,
+		timeline: null,
 	}
+}
+
+const trax_config = {
+	totalTimelineLayers: 4,
+	totalTimeLineSpaces: 23, // (24)
 }
 
 // Validação estilo da trax
@@ -105,7 +114,7 @@ trax_DOM.containers.trax = HUBBE.utils.createElement('div',{
 							HUBBE.utils.createElement('input',{id:'moveLeft',class:'tinyBtn',type:'button',isDisabled:true}),
 							HUBBE.utils.createElement('input',{id:'moveRight',class:'tinyBtn',type:'button',isDisabled:true}),
 						]}),
-						HUBBE.utils.createElement('div',{id:'timeline',elements:[
+						trax_DOM.containers.timeline = HUBBE.utils.createElement('div',{id:'timeline',elements:[
 							//TODO: Loop
 						]})
 					]}),
@@ -127,6 +136,31 @@ function validarTrax(){
 		traxWindow.parentElement.remove();
 	}
 	trax_DOM.containers.draggableWin.appendChild(trax_DOM.containers.trax);
+	
+	criarTimeline();
+}
+
+function criarTimeline(){
+	console.log(trax_DOM.containers.timeline);
+	if(trax_DOM.containers.timeline){
+		for(let l=4;l<trax_config.totalTimelineLayers;l++){
+
+			//Criação dos layers
+			let layerContent = null;
+			let layer = HUBBE.utils.createElement('div',{class:'layer', elements:[
+				HUBBE.utils.createElement('div',{elements:[
+					layerContent = HUBBE.utils.createElement('div',{})
+				]})
+			]});
+			trax_DOM.containers.timeline.appendChild(layer);
+
+			//Criação dos espaços
+			for(let s=0;s<trax_config.totalTimeLineSpaces;s++){
+				let space = HUBBE.utils.createElement('div',{class:'space'})
+				layerContent.appendChild(space);
+			}
+		}
+	}
 }
 
 function startDrag(evt) {
