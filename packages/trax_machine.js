@@ -142,7 +142,7 @@ function validarTrax(){
 
 function criarTimeline(){
 	console.log(trax_DOM.containers.timeline);
-	if(trax_DOM.containers.timeline){
+	if(trax_DOM.containers.timeline != null){
 		for(let l=4;l<trax_config.totalTimelineLayers;l++){
 
 			//Criação dos layers
