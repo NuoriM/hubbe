@@ -37,9 +37,11 @@ let style = `
 	.smallBtn:disabled{background-position: 36px 0px;}
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.tinyBtn:disabled{background-position: 19px 0px;}
-	#timeline{background-image:url(${images.timeline});}
-	div#timeline div.layer {background-image:url(${images.timelineLine})}
-	.space{width: 21px;height: 21px;}
+	#timeline{background-image:url(${images.timeline});display: flex;margin: 0 auto;flex-direction: column;border: 6px solid transparent;gap: 2px;}
+	div#timeline div.layer {background-image:url(${images.timelineLine});display: flex;}
+	div#timeline div.layer > div {overflow: hidden;width: 528px;height: 21px;position: relative;}
+	div#timeline div.layer > div > div {}
+	.space{display: inline-block;font-size: 15px;overflow: hidden;width: 21px;height: 21px;margin-left: 1px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
 const trax_DOM = {
