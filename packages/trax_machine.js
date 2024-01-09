@@ -145,7 +145,7 @@ function criarTimeline(){
 	let timeline = document.querySelector('#timeline');
 	//console.log(trax_DOM.containers.timeline);
 	if(timeline){
-		for(let l=4;l<trax_config.totalTimelineLayers;l++){
+		for(let l=0;l<trax_config.totalTimelineLayers;l++){
 
 			//Criação dos layers
 			let layerContent = null;
