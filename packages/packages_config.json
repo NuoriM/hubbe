@@ -1,13 +1,23 @@
 [
 	{
+		"type": "importable",
 		"file_name": "trax_machine",
 		"file_url": "/trax_machine.js",
 		"author": "NuoriM",
-		"version": "1.5.2"
+		"version": "1.5.3",
+		"dependencies": ["advancedLogger"]
 	},
 	{
+		"type": "importable",
 		"file_name": "demo",
 		"file_url": "/demo.js",
+		"author":"NuoriM",
+		"version":"0.0.1"
+	},
+	{
+		"type": "default",
+		"file_name": "dependenciesDetector",
+		"file_url": "/dependenciesDetector.js",
 		"author":"NuoriM",
 		"version":"0.0.1"
 	}
