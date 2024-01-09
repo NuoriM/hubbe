@@ -37,10 +37,10 @@ let style = `
 	.smallBtn:disabled{background-position: 36px 0px;}
 	.tinyBtn{width: 19px;height: 23px;padding: 0;margin: 0;border: 0;background-color: transparent;}
 	.tinyBtn:disabled{background-position: 19px 0px;}
-	#timeline{background-image:url(${images.timeline});display: flex;margin: 0 auto;flex-direction: column;border: 6px solid transparent;gap: 2px;}
+	#timeline{border-image: url(${images.timeline}) 6 round;display: flex;margin: 0 auto;flex-direction: column;border: 6px solid transparent;gap: 2px;background: linear-gradient(hsl(196, 18%, 45%), hsl(196, 18%, 45%)) 0 0 / 100% no-repeat;}
 	div#timeline div.layer {background-image:url(${images.timelineLine});display: flex;}
-	div#timeline div.layer > div {overflow: hidden;width: 528px;height: 21px;position: relative;}
-	div#timeline div.layer > div > div {}
+	div#timeline div.layer > div {overflow: hidden;width: 531px;height: 25px;position: relative;}
+	div#timeline div.layer > div > div {display: flex;gap: 1px;padding: 1px;}
 	.space{display: inline-block;font-size: 15px;overflow: hidden;width: 21px;height: 21px;margin-left: 1px;}
 	.draggable_window{display: inline-block;visibility: hidden;pointer-events: all;}
 `;
@@ -55,7 +55,7 @@ const trax_DOM = {
 
 const trax_config = {
 	totalTimelineLayers: 4,
-	totalTimeLineSpaces: 23, // (24)
+	totalTimeLineSpaces: 24, // (24)
 }
 
 // Validação estilo da trax
